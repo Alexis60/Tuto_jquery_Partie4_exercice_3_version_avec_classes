@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+       <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+       <script src="Verification.js" type="text/javascript"></script>
+       <title>Exercice 3 JQuery Partie 4</title>
+   </head>
+   <form>
+       Nom :<input id="nom" type="text" >
+       Prénom :<input id="prenom" type="text" >
+       Mail :<input id="mail" type="text" >
+       Téléphone :<input id="tel" type="text" >
+       <a id="validation" href="#validation">OK</a>
+   </form>   ctexte.mail
+
+       <script>
+          $(document).ready(function(){
+              $('#validation').click(function(){    
+                  var ctexte = new texte;
+                  ctexte.nom = $('#nom').val();
+                  ctexte.prenom = $('#prenom').val();
+                  ctexte.mail = $('#mail').val();
+                  ctexte.tel = $('#tel').val();
+                  ctexte.verificationMail(ctexte.mail);
+                  ctexte.verificationTexte(ctexte.nom);
+                  ctexte.verificationTexte(ctexte.prenom);
+                  ctexte.verificationTel();
+              }); 
+          });
+      </script>
+</html>
